@@ -15,7 +15,7 @@ export default function App() {
   const [idPickerResponse, setIdPickerResponse] = useState(null);
   const [visibleId, setVisibleId] = useState(false);
 
-  const onImageLibraryPress = useCallback(() => {
+  const pressGalleryForPhoto = useCallback(() => {
     const options = {
       selectionLimit: 1,
       mediaType: 'photo',
@@ -61,7 +61,7 @@ export default function App() {
         <PhotoPickerModal
           isVisible={visiblePhoto}
           onClose={() => setVisiblePhoto(false)}
-          onImageLibraryPress={pressCameraForPhoto}
+          onImageLibraryPress={pressGalleryForPhoto}
           onCameraPress={pressCameraForPhoto}
         />
       </View>
